@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4F4;
+}
+
+.container{
+    width: 650px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+h1, h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a{
+    color: #3d9ad8;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3d9ad8cc;
+}
+
+.form-search{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.form-search h2{
+    width: 50%;
+}
+
+.form-search button{
+    width: 10%;
+    border-radius: 5px;
+    background-color: #3d9ad8;
+}
+
+.form-search button:hover{
+    background-color: #3d9ad8cc;
+}
+
+.form-link{
+    display: flex;
+    justify-content: right;
+    margin-top: 5px;
+}
+
+.form-link button{
+    width: 25%;
+    border-radius: 5px;
+    background-color: #a73dd8;
+}
+
+.form-link button:hover{
+    width: 25%;
+    background-color: #a73dd8ce;
+}
+
+.status1{
+    color: red;
+}
+
+.status2{
+    color: green;
+}
+
+.status3{
+    color: blue;
+}
+
+.status4{
+    color: gray;
+}
+
+input, select, button{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #DDD;
+    border-radius: 8px solid black;
+}
+
+button{
+    color: white;
+    background-color: #3dd87e;
+}
+
+button:hover{
+    background-color: #3dd87ece;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table td, table th{
+    padding: 10px;
+    border: 1px solid #DDD;
+}
+
+.top{
+    top: 0;
+    position: sticky;
+    border: 1px solid #DDD;
+    background-color: white;
+}
+
+.table-index{
+    height: 250px;
+    overflow: auto;
+    margin-top: 10px;
+    border: 1px solid #DDD;
+}
+
+.table-history{
+    height: 500px;
+    overflow: auto;
+    margin-top: 10px;
+    border: 1px solid #DDD;
+}

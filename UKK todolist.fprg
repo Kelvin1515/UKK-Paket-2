@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="UKK todolist"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-17 10:00:59 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1DQzVWSzdHOzIwMjUtMDMtMTc7MDk6MzY6NDAgQU07MjgxNw=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1DQzVWSzdHOzIwMjUtMDMtMTc7MTA6MDA6NTkgQU07MjsyOTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu" type="Integer" array="False" size=""/>
+            <declare name="task, status, priority, date" type="String" array="False" size=""/>
+            <output expression="&quot;Aplikasi To Do List&quot;" newline="True"/>
+            <output expression="&quot;1. Tambah Tugas&quot;" newline="True"/>
+            <output expression="&quot;2. Melhat Tugas&quot;" newline="True"/>
+            <output expression="&quot;3. Edit Tugas&quot;" newline="True"/>
+            <output expression="&quot;4. Hapus Tugas&quot;" newline="True"/>
+            <input variable="menu"/>
+            <if expression="menu = 1">
+                <then>
+                    <output expression="&quot;Tambah Tugas&quot;" newline="True"/>
+                    <output expression="&quot;Masukkan Tugas&quot;" newline="True"/>
+                    <input variable="task"/>
+                    <output expression="&quot;Masukkan Status&quot;" newline="True"/>
+                    <input variable="status"/>
+                    <output expression="&quot;Masukkan Priority&quot;" newline="True"/>
+                    <input variable="priority"/>
+                    <output expression="&quot;Masukkan Tanggal&quot;" newline="True"/>
+                    <input variable="date"/>
+                    <output expression="&quot;Apakah Anda Ingin Menambah Tugas?&quot;" newline="True"/>
+                    <output expression="&quot;1. Ya&quot;" newline="True"/>
+                    <output expression="&quot;2. Tidak&quot;" newline="True"/>
+                    <input variable="menu"/>
+                    <if expression="menu = 1">
+                        <then>
+                            <output expression="&quot;Tugas Berhasil Ditambah&quot;" newline="True"/>
+                            <open expression="&quot;ToDoList Tugas.txt&quot;" mode="write"/>
+                            <write expression="task"/>
+                            <write expression="status"/>
+                            <write expression="priority"/>
+                            <write expression="date"/>
+                            <close mode="write"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Tugas Gagal Ditambah&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="menu = 2">
+                        <then>
+                            <output expression="&quot;Melihat Tugas&quot;" newline="True"/>
+                            <open expression="&quot;ToDoList Tugas.txt&quot;" mode="read"/>
+                            <read variable="task"/>
+                            <output expression="task" newline="True"/>
+                            <read variable="status"/>
+                            <output expression="status" newline="True"/>
+                            <read variable="priority"/>
+                            <output expression="priority" newline="True"/>
+                            <read variable="date"/>
+                            <output expression="date" newline="True"/>
+                            <close mode="read"/>
+                        </then>
+                        <else>
+                            <if expression="menu = 3">
+                                <then>
+                                    <output expression="&quot;Edit Tugas&quot;" newline="True"/>
+                                    <open expression="&quot;ToDoList Tugas.txt&quot;" mode="read"/>
+                                    <read variable="task"/>
+                                    <output expression="task" newline="True"/>
+                                    <read variable="status"/>
+                                    <output expression="status" newline="True"/>
+                                    <read variable="priority"/>
+                                    <output expression="priority" newline="True"/>
+                                    <read variable="date"/>
+                                    <output expression="date" newline="True"/>
+                                    <close mode="read"/>
+                                    <output expression="&quot;Apakah Anda Ingin Mengedit Tugas?&quot;" newline="True"/>
+                                    <output expression="&quot;1. Ya&quot;" newline="True"/>
+                                    <output expression="&quot;2. Tidak&quot;" newline="True"/>
+                                    <input variable="menu"/>
+                                    <if expression="menu = 1">
+                                        <then>
+                                            <output expression="&quot;Edit Tugas&quot;" newline="True"/>
+                                            <output expression="&quot;Masukkan Tugas&quot;" newline="True"/>
+                                            <input variable="task"/>
+                                            <output expression="&quot;Masukkan Status&quot;" newline="True"/>
+                                            <input variable="status"/>
+                                            <output expression="&quot;Masukkan Priority&quot;" newline="True"/>
+                                            <input variable="priority"/>
+                                            <output expression="&quot;Masukkan Tanggal&quot;" newline="True"/>
+                                            <input variable="date"/>
+                                            <output expression="&quot;Apakah Anda Yakin Ingin Mengedit Tugas?&quot;" newline="True"/>
+                                            <output expression="&quot;1. Ya&quot;" newline="True"/>
+                                            <output expression="&quot;2. Tidak&quot;" newline="True"/>
+                                            <input variable="menu"/>
+                                            <if expression="menu = 1">
+                                                <then>
+                                                    <output expression="&quot;Tugas Berhasil Diedit&quot;" newline="True"/>
+                                                    <open expression="&quot;ToDoList Tugas.txt&quot;" mode="write"/>
+                                                    <write expression="task"/>
+                                                    <write expression="status"/>
+                                                    <write expression="priority"/>
+                                                    <write expression="date"/>
+                                                    <close mode="write"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Tugas Gagal Diedit&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="menu = 4">
+                                        <then>
+                                            <output expression="&quot;Hapus Tugas&quot;" newline="True"/>
+                                            <output expression="&quot;Apakah Anda Ingin Menghapus Tugas?&quot;" newline="True"/>
+                                            <output expression="&quot;1. Ya&quot;" newline="True"/>
+                                            <output expression="&quot;2. Tidak&quot;" newline="True"/>
+                                            <input variable="menu"/>
+                                            <if expression="menu = 1">
+                                                <then>
+                                                    <output expression="&quot;Tugas Berhasil Dihapus&quot;" newline="True"/>
+                                                    <open expression="&quot;ToDoList Tugas.txt&quot;" mode="write"/>
+                                                    <write expression="&quot;&quot;"/>
+                                                    <write expression="&quot;&quot;"/>
+                                                    <write expression="&quot;&quot;"/>
+                                                    <write expression="&quot;&quot;"/>
+                                                    <close mode="write"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Tugas Gagal Dihapus&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
